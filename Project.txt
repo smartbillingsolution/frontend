@@ -1,0 +1,7 @@
+Creating boilaplate for starting project in react
+
+
+using mobx for state management
+use url for understanding :  https://blog.logrocket.com/using-mobx-for-large-scale-enterprise-state-management/
+
+
