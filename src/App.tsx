@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { observer } from 'mobx-react';
+import { unstable_HistoryRouter as HistoryRouter }  from 'react-router-dom';
+import { history } from './helpers/common';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
+import ErrorBoundary from './components/ErrorBoundaries';
+import GlobalStyle from './styles/globalStyle';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HistoryRouter history={history}>
+        <ThemeProvider theme={theme}>
+          <ErrorBoundary>
+            <GlobalStyle />
+              Hi mohit here           
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+            />
+          </ErrorBoundary>
+        </ThemeProvider>
+        </HistoryRouter>
   );
 }
 
-export default App;
+export default observer(App);
