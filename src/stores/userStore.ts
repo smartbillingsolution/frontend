@@ -27,8 +27,6 @@ export default class UserStore {
   }
 
   @action changeUserName = (name: string) =>{
-    console.log(name);
     this.userName = name;
-    console.log("this.userName", this.userName);
   }
 }
