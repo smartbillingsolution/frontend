@@ -1,3 +1,4 @@
+import { Button } from '@blueprintjs/core';
 import { observer } from 'mobx-react';
 
 import { useStore } from '../../stores/useStore';
@@ -17,6 +18,7 @@ const Index = observer(() => {
       />
 
       <h3>hi my name is {user.userName}</h3>
+      <Button intent="primary">Search</Button>
     </>
   );
 });
