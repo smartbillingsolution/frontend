@@ -5,3 +5,9 @@ using mobx for state management
 use url for understanding :  https://blog.logrocket.com/using-mobx-for-large-scale-enterprise-state-management/
 
 
+eslint configuration:
+                    https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
+
+
+using main component lib:
+                    https://blueprintjs.com/docs/#blueprint/getting-started
