@@ -1,8 +1,7 @@
-import AppStore from "../stores/appStore";
-import AppApi from "./appApi";
+import AppStore from '../stores/appStore';
+import AppApi from './appApi';
 
 export default class UserApi {
-
   constructor(private api: AppApi, private store: AppStore) {}
 
   async getAll() {

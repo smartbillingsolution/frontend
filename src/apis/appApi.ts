@@ -1,10 +1,9 @@
-import axios from "axios";
-import AppStore from "../stores/appStore";
-import UserApi from "./userApi";
+import axios from 'axios';
+import AppStore from '../stores/appStore';
+import UserApi from './userApi';
 
 export default class AppApi {
-
-  client = axios.create({ baseURL: "https://jsonplaceholder.typicode.com" });
+  client = axios.create({ baseURL: 'https://jsonplaceholder.typicode.com' });
 
   user: UserApi;
 

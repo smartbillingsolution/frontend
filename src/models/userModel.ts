@@ -1,8 +1,7 @@
-import AppStore from "../stores/appStore";
-import IUser from "../types/userInterface";
+import AppStore from '../stores/appStore';
+import IUser from '../types/userInterface';
 
 export default class User implements IUser {
-
   id: number;
   name: string;
   username: string;

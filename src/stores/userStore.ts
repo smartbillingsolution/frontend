@@ -1,18 +1,12 @@
-import {
-  action,
-  computed,
-  makeAutoObservable,
-  observable,
-} from "mobx";
-import User from "../models/userModel";
-import IUser from "../types/userInterface";
-import AppStore from "./appStore";
+import { action, computed, makeAutoObservable, observable } from 'mobx';
+import User from '../models/userModel';
+import IUser from '../types/userInterface';
+import AppStore from './appStore';
 
 export default class UserStore {
-
   byId = observable.map<number, User>();
 
-  userName = "mohit nandkumar shahu"
+  userName = 'mohit nandkumar shahu';
 
   constructor(private store: AppStore) {
     makeAutoObservable(this);
@@ -26,7 +20,7 @@ export default class UserStore {
     return Array.from(this.byId.values());
   }
 
-  @action changeUserName = (name: string) =>{
+  @action changeUserName = (name: string) => {
     this.userName = name;
-  }
+  };
 }

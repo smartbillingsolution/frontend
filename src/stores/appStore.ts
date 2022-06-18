@@ -1,5 +1,5 @@
-import UserStore from "./userStore";
+import UserStore from './userStore';
 
 export default class AppStore {
-    user = new UserStore(this);
+  user = new UserStore(this);
 }
