@@ -1,9 +1,8 @@
 import {
   action,
   computed,
-  makeObservable,
+  makeAutoObservable,
   observable,
-  ObservableMap,
 } from "mobx";
 import User from "../models/userModel";
 import IUser from "../types/userInterface";
@@ -13,8 +12,10 @@ export default class UserStore {
 
   byId = observable.map<number, User>();
 
+  userName = "mohit nandkumar shahu"
+
   constructor(private store: AppStore) {
-    makeObservable(this);
+    makeAutoObservable(this);
   }
 
   @action load(users: IUser[]) {
@@ -23,5 +24,11 @@ export default class UserStore {
 
   @computed get all() {
     return Array.from(this.byId.values());
+  }
+
+  @action changeUserName = (name: string) =>{
+    console.log(name);
+    this.userName = name;
+    console.log("this.userName", this.userName);
   }
 }
