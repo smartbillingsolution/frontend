@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react';
-
+import { Button } from '@mantine/core';
 import { useStore } from '../../stores/useStore';
 
 const Index = observer(() => {
@@ -15,9 +15,8 @@ const Index = observer(() => {
           user.changeUserName(e.target.value);
         }}
       />
-
       <h3>hi my name is {user.userName}</h3>
-      <button>Search</button>
+      <Button>Hello world!</Button>
     </>
   );
 });
